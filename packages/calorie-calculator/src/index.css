@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image:repeating-linear-gradient(50deg,rgb(150, 104, 211) 10%, rgb(63, 55, 82) 20%);
+  overflow: hidden;
+}
+
+.form-container{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  padding: 1rem;
+  min-width: 30rem;
+  max-width: 30rem;
+
+}
+
+.form-box{
+  text-align: center;
+  border: 5px solid  rgb(66, 58, 58);
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #B7A77A;
+}
+ 
+.s-p{
+  padding: .5rem 0rem;
+
+}
+.field-name{
+  font-size: 1.8rem;
+  color: red;
+}
+
+label{
+  font-size: 2rem;
+
+}
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row [class^="col-"] {
+  float: left;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 3rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 3rem) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 3rem) / 4);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 3rem) / 3) + 3rem);
+}
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 3rem) / 4) + 3rem);
+}
+.row .col-3-of-4 {
+  width: calc(3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem);
+}
+
+.btn-circle{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  outline: none;
+  background-color: aqua;
+  border-width: 3px;
+
+}
+
+input[type=number] {
+  border: none;
+  border-radius: 10px;
+  height: 2rem;
+  width: 100%;
+}
+input[type=radio] {
+  border: none;
+  height:  1.4rem;
+
+}
