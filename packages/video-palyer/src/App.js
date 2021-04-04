@@ -3,6 +3,7 @@ import "./index.css";
 
 function App() {
   const [volume, setVolume] = useState(70);
+  const [timeGone, setTimeGone] = useState(0);
   useEffect(() => {
     const controls = document.querySelector(".controls"),
       fileChooser = document.querySelector(".file-chooser"),
@@ -82,7 +83,7 @@ function App() {
 
     const updatetimeBar = (e) => {
       if (!isMouseDown && e.type === "mousemove") return;
-
+      console.log(timeBar.value);
       video.currentTime = timeBar.value;
       if (!isMouseDown) return;
 
@@ -289,7 +290,14 @@ function App() {
           min="0"
           max="100"
         />
-        <input type="range" className="time-bar" value="0" min="0" max="" />
+        <input
+          type="range"
+          className="time-bar"
+          value={timeGone}
+          onChange={(e) => setTimeGone(e.target.value)}
+          min="0"
+          max=""
+        />
         <time className="time">N/A</time>
         <div className="speed">
           <select>
