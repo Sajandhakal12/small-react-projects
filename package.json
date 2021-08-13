@@ -25,6 +25,10 @@
     ]
   },
   "scripts": {
-    
+    "calorie": "cd packages/calorie-calculator && yarn start",
+    "nepali": "cd packages/nepali-typing && yarn start",
+    "password": "cd packages/password-strength-test && yarn start",
+    "player": "cd packages/video-player && yarn start",
+    "drawing": "cd packages/drawing && yarn start"
   }
 }
